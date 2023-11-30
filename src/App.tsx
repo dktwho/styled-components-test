@@ -6,6 +6,7 @@ function App() {
         <>
             <Box>
                 <StyledBtn>Styled BTN</StyledBtn>
+                <StyledBtn as ='a' href={'#'}>Link Styled BTN</StyledBtn>
                 <SuperButton>SuperButton</SuperButton>
             </Box>
         </>
