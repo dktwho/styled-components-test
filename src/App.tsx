@@ -1,11 +1,13 @@
 import './App.css'
 import styled from "styled-components";
 
-
 function App() {
     return (
         <>
-            <StyledBtn>Styled BTN</StyledBtn>
+            <Box>
+                <StyledBtn>Styled BTN</StyledBtn>
+            </Box>
+
         </>
     )
 }
@@ -21,4 +23,12 @@ const StyledBtn = styled.button`
   color: snow;
   font-size: 1.3rem;
   font-weight: bold;
+`
+
+const Box = styled.div`
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
 `
