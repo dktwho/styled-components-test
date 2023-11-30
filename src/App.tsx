@@ -4,6 +4,13 @@ import styled from "styled-components";
 function App() {
     return (
         <>
+            <Menu>
+                <ul>
+                    <li><a href="">menu item 1</a></li>
+                    <li><a href="">menu item 2</a></li>
+                    <li><a href="">menu item 3</a></li>
+                </ul>
+            </Menu>
             <Box>
                 <StyledBtn>button</StyledBtn>
                 <StyledBtn as ='a' href={'#'}>link</StyledBtn>
@@ -16,6 +23,20 @@ function App() {
 
 export default App
 
+const Menu = styled.nav`
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  
+  li > a {
+    color: green;
+  }
+  li + li {
+    margin-left: 10px;
+  }
+}
+`
 
 const StyledBtn = styled.button`
   border: none;
