@@ -24,6 +24,14 @@ const StyledBtn = styled.button`
   color: snow;
   font-size: 1.3rem;
   font-weight: bold;
+
+  &:hover {
+    background-color: #6b9331;
+  }
+
+  &:last-child {
+    background-color: #b0f696;
+  }
 `
 
 const Link = styled.a`
@@ -45,4 +53,11 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  button {
+    cursor: pointer
+  }
+
+${Link} {
+  cursor: zoom-in;
+}
 `
