@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import {MyAnimation} from "../styles/animations/Animations.tsx";
 
-export const StyledBtn = styled.button`
+type StyledBtnPropsType = {
+    color?: string,
+    fontSize?: string,
+}
+
+export const StyledBtn = styled.button<StyledBtnPropsType>`
   border: none;
   // background-color: greenyellow;
   background-color: ${props => props.color ||  'greenyellow' };
   padding: 10px 20px;
   color: snow;
-  font-size: 1.3rem;
+  // font-size: 1.3rem;
+  font-size: ${props => props.fontSize};
   font-weight: bold;
 
   &:hover {

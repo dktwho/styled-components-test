@@ -15,7 +15,9 @@ function App() {
             </Menu>
             <Box>
                 <StyledBtn>button</StyledBtn>
-                <StyledBtn color={'red'}>button</StyledBtn>
+                <StyledBtn color={'red'} fontSize={'26px'}>button</StyledBtn>
+                <StyledBtn color={'blue'}>button</StyledBtn>
+                <br/>
                 <StyledBtn as='a' href={'#'}>link</StyledBtn>
                 <StyledBtn as={Link} href={'#'}>Link Component</StyledBtn>
                 <SuperButton>SuperButton</SuperButton>
