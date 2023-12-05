@@ -3,7 +3,8 @@ import {MyAnimation} from "../styles/animations/Animations.tsx";
 
 export const StyledBtn = styled.button`
   border: none;
-  background-color: greenyellow;
+  // background-color: greenyellow;
+  background-color: ${props => props.color ||  'greenyellow' };
   padding: 10px 20px;
   color: snow;
   font-size: 1.3rem;
