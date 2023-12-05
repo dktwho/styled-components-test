@@ -19,10 +19,8 @@ function App() {
                 <StyledBtn color={'red'} fontSize={'26px'}>button</StyledBtn>
                 <StyledBtn color={'blue'}>button</StyledBtn>
                 <br/>
-                <StyledBtn color={'bisque'} primary={true}>primary</StyledBtn>
-                <StyledBtn color={'deeppink'} outline={false}>outline false</StyledBtn>
-                <StyledBtn color={'deeppink'} outline={true}>outline true false</StyledBtn>
-                <StyledBtn>button</StyledBtn>
+                <StyledBtn color={'bisque'} btnType={'outline'}>primary</StyledBtn>
+                <StyledBtn color={'deeppink'} btnType={'primary'} >outline false</StyledBtn>
                 <br/>
                 <StyledBtn as='a' href={'#'}>link</StyledBtn>
                 <StyledBtn as={Link} href={'#'}>Link Component</StyledBtn>

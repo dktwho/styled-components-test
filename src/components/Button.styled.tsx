@@ -4,8 +4,8 @@ import {MyAnimation} from "../styles/animations/Animations.tsx";
 type StyledBtnPropsType = {
     color?: string
     fontSize?: string
-    primary?: boolean
-    outline?: boolean
+    btnType?: "primary" | 'outline'
+
 }
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
@@ -25,7 +25,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   }
 
   // outline 
-  ${props => props.outline && css<StyledBtnPropsType>`
+  ${props => props.btnType === 'outline' && css<StyledBtnPropsType>`
     border: 5px solid ${props => props.color || 'greenyellow'}
     color: ${props => props.color || 'greenyellow'}
     background-color: transparent;
@@ -39,7 +39,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   `} 
           
           // primary       
-  ${props => props.primary && css<StyledBtnPropsType>`
+  ${props => props.btnType === 'primary' && css<StyledBtnPropsType>`
     background-color: ${props => props.color || 'greenyellow'};
     color: #f54376;
   `}
