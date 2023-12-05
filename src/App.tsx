@@ -3,7 +3,6 @@ import {StyledBtn, SuperButton} from "./components/Button.styled.tsx";
 import {Menu} from "./components/Menu.styled.tsx";
 import {Link} from "./components/Link.styled.tsx";
 import {Box} from "./components/Box.styled.tsx";
-
 function App() {
     return (
         <>
