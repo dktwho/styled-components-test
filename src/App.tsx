@@ -3,6 +3,7 @@ import {StyledBtn, SuperButton} from "./components/Button.styled.tsx";
 import {Menu} from "./components/Menu.styled.tsx";
 import {Link} from "./components/Link.styled.tsx";
 import {Box} from "./components/Box.styled.tsx";
+
 function App() {
     return (
         <>
@@ -19,8 +20,8 @@ function App() {
                 <StyledBtn color={'blue'}>button</StyledBtn>
                 <br/>
                 <StyledBtn color={'bisque'} primary={true}>primary</StyledBtn>
-                <StyledBtn outline={false}>outline false</StyledBtn>
-                <StyledBtn color={'deeppink'}>button</StyledBtn>
+                <StyledBtn color={'deeppink'} outline={false}>outline false</StyledBtn>
+                <StyledBtn>button</StyledBtn>
                 <br/>
                 <StyledBtn as='a' href={'#'}>link</StyledBtn>
                 <StyledBtn as={Link} href={'#'}>Link Component</StyledBtn>

@@ -12,10 +12,11 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   border: none;
   // background-color: greenyellow;
   background-color: ${props => props.color || 'greenyellow'};
+  border-radius: 10px;
   padding: 10px 20px;
   color: #494747;
   // font-size: 1.3rem;
-  font-size: ${props => props.fontSize};
+  font-size: ${props => props.fontSize || '2rem'};
   font-weight: bold;
 
   &:hover {
