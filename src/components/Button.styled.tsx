@@ -10,12 +10,9 @@ type StyledBtnPropsType = {
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
   border: none;
-  // background-color: greenyellow;
-  background-color: ${props => props.color || 'greenyellow'};
   border-radius: 10px;
   padding: 10px 20px;
   color: #494747;
-  // font-size: 1.3rem;
   font-size: ${props => props.fontSize || '2rem'};
   font-weight: bold;
 
@@ -31,12 +28,22 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   ${props => props.outline && css<StyledBtnPropsType>`
     border: 5px solid ${props => props.color || 'greenyellow'}
     color: ${props => props.color || 'greenyellow'}
-    background-color: transparent
-  `} // primary       
+    background-color: transparent;
+
+    &:hover {
+      border-color: #1b45c4;
+      border: 2px solid #1b45c4;
+      color: #1b45c4;
+      background-color: transparent;
+    }
+  `} 
+          
+          // primary       
   ${props => props.primary && css<StyledBtnPropsType>`
     background-color: ${props => props.color || 'greenyellow'};
     color: #f54376;
   `}
+  
   
 `
 

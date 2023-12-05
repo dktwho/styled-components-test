@@ -21,6 +21,7 @@ function App() {
                 <br/>
                 <StyledBtn color={'bisque'} primary={true}>primary</StyledBtn>
                 <StyledBtn color={'deeppink'} outline={false}>outline false</StyledBtn>
+                <StyledBtn color={'deeppink'} outline={true}>outline true false</StyledBtn>
                 <StyledBtn>button</StyledBtn>
                 <br/>
                 <StyledBtn as='a' href={'#'}>link</StyledBtn>
