@@ -5,6 +5,7 @@ type StyledBtnPropsType = {
     color?: string
     fontSize?: string
     btnType?: "primary" | 'outline'
+    active?: boolean
 
 }
 
@@ -15,6 +16,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   color: #494747;
   font-size: ${props => props.fontSize || '2rem'};
   font-weight: bold;
+
 
   &:hover {
     background-color: #6b9331;
@@ -36,15 +38,21 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
       color: #1b45c4;
       background-color: transparent;
     }
-  `} 
-          
-          // primary       
+  `} // primary       
   ${props => props.btnType === 'primary' && css<StyledBtnPropsType>`
     background-color: ${props => props.color || 'greenyellow'};
     color: #f54376;
+
+    &:hover {
+      background-color: aquamarine;
+    }
   `}
-  
-  
+
+
+  ${props => props.active && css<StyledBtnPropsType>`
+    box-shadow: 5px 5px 5px 5px #4053cc;
+
+  `}
 `
 
 export const SuperButton = styled(StyledBtn)`
@@ -53,5 +61,5 @@ export const SuperButton = styled(StyledBtn)`
   &:hover {
     animation:  ${MyAnimation} 2s ease-in-out;
   }
-  
+
 `
