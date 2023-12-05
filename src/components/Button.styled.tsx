@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {MyAnimation} from "../styles/animations/Animations.tsx";
 
 type StyledBtnPropsType = {
@@ -13,7 +13,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   // background-color: greenyellow;
   background-color: ${props => props.color || 'greenyellow'};
   padding: 10px 20px;
-  color: snow;
+  color: #494747;
   // font-size: 1.3rem;
   font-size: ${props => props.fontSize};
   font-weight: bold;
@@ -26,14 +26,17 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     background-color: #b0f696;
   }
 
-  // primary
-  background-color: ${props => props.color || 'greenyellow'};
-  color: #560d34;
-
   // outline 
-  border: 5px solid ${props => props.color || 'greenyellow'}
-  color: ${props => props.color || 'greenyellow'}
-  background-color: transparent
+  ${props => props.outline && css<StyledBtnPropsType>`
+    border: 5px solid ${props => props.color || 'greenyellow'}
+    color: ${props => props.color || 'greenyellow'}
+    background-color: transparent
+  `} // primary       
+  ${props => props.primary && css<StyledBtnPropsType>`
+    background-color: ${props => props.color || 'greenyellow'};
+    color: #f54376;
+  `}
+  
 `
 
 export const SuperButton = styled(StyledBtn)`
