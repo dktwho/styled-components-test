@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {myTheme} from "./theme/Theme.styled.tsx";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -11,6 +12,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #262525;
+    background-color: ${myTheme.colors.grey.dark};
   }
 `
