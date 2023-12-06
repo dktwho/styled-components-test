@@ -3,6 +3,7 @@ import {StyledBtn, SuperButton} from "./components/Button.styled.tsx";
 import {Menu} from "./components/Menu.styled.tsx";
 import {Link} from "./components/Link.styled.tsx";
 import {Box} from "./components/Box.styled.tsx";
+import {myTheme} from "./styles/theme/Theme.styled.tsx";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <br/>
                 <StyledBtn  active color={'bisque'} btnType={'outline'}>primary</StyledBtn>
                 <StyledBtn  color={'deeppink'} btnType={'primary'} >outline false</StyledBtn>
+                <StyledBtn  color={myTheme.colors.success} btnType={'primary'} >outline color props</StyledBtn>
                 <br/>
                 <StyledBtn as='a' href={'#'}>link</StyledBtn>
                 <StyledBtn as={Link} href={'#'}>Link Component</StyledBtn>
